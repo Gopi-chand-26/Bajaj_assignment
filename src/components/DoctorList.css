@@ -1,0 +1,291 @@
+.doctor-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1400px;  /* Increased from 1200px */
+  margin: 0 auto;
+  padding: 20px 40px;  /* Increased horizontal padding */
+}
+
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.doctor-header {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.doctor-basic-info {
+  flex: 1;
+  padding-top: 4px;
+}
+
+.doctor-basic-info h2 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.specialty {
+  color: #546e7a;
+  margin: 8px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.qualifications {
+  color: #78909c;
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.clinic-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #eceff1;
+}
+
+.appointment-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eceff1;
+}
+
+.consultation-types {
+  display: flex;
+  gap: 12px;
+  margin-right: auto;
+}
+
+.video-consult, .in-clinic {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.fees {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 24px;
+}
+
+.book-appointment {
+  padding: 12px 24px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .doctor-list {
+    padding: 20px;
+  }
+
+  .doctor-card {
+    padding: 16px;
+  }
+
+  .doctor-header {
+    gap: 16px;
+  }
+
+  .doctor-image, .doctor-initials {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fees {
+    margin: 0 12px;
+  }
+
+  .book-appointment {
+    padding: 10px 16px;
+  }
+}
+
+.doctor-initials {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e3f2fd;
+  color: #1976d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.doctor-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-basic-info {
+  flex: 1;
+}
+
+.doctor-basic-info h2 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.specialty {
+  color: #666;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.qualifications {
+  color: #666;
+  margin: 3px 0;
+  font-size: 13px;
+}
+
+.experience {
+  color: #666;
+  margin: 3px 0;
+  font-size: 13px;
+}
+
+.clinic-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.clinic-details, .location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.appointment-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.fees {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.book-appointment {
+  padding: 10px 20px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.book-appointment:hover {
+  background: #1565c0;
+}
+
+.book-appointment.booked {
+  background: #4caf50;
+}
+
+.languages {
+  color: #666;
+  font-size: 12px;
+  margin: 3px 0;
+}
+
+.consultation-types {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.video-consult, .in-clinic {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.in-clinic {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  margin: 20px 0;
+}
+
+.no-results-content {
+  text-align: center;
+  padding: 40px;
+}
+
+.no-results-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.no-results-content h3 {
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+  font-size: 20px;
+}
+
+.no-results-content p {
+  color: #78909c;
+  margin: 0;
+  font-size: 16px;
+}

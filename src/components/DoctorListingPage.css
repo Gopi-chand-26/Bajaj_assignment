@@ -1,0 +1,32 @@
+.doctor-listing-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.filter-panel {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.doctor-list-container {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .filter-panel {
+    width: 100%;
+  }
+}
